@@ -2,6 +2,12 @@ syntax = "proto3";
 
 option csharp_namespace = "Detect.Api";
 
+option java_multiple_files = true;
+option java_package =  "com.rekognitor.io.protos";
+option java_outer_classname = "DetectApi";
+
+option go_package = "github.com/protocolbuffers/protobuf/rekognitor/detectapi";
+
 package detectApi;
 
 service Detect { 
