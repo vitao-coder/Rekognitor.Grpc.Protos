@@ -15,7 +15,7 @@
 
     vitor5166/detect.rekognitor.api.
 
-**For use with Streaming from RTSP to send to detect.rekognitor.api **
+For use with Streaming from RTSP to send to detect.rekognitor.api
 -
 
 **Push image for running Streamer from docker repository:**
