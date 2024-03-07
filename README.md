@@ -15,6 +15,22 @@
 
     vitor5166/detect.rekognitor.api.
 
+**For use with Streaming from RTSP to send to detect.rekognitor.api **
+-
+
+**Push image for running Streamer from docker repository:**
+
+    docker push vitor5166/rekognitor-streamer:latest
+
+**Run with url for detect services (vitor5166/detect.rekognitor.api) with, port for streamer environment variables:**
+
+    docker run -dt --env PORT="{port to run streamer. ex: 8080}" --env MODE={1=person, 2=knifesAndGuns 3=brazilianCarplates} --env DETECT_SERVICES_URL="{address to detect services}:{port to detect services}" -p 8080:8080 -p 1883:1883 -P --name rekognitor-streamer vitor5166/rekognitor-streamer:latest
+
+**To connect on MQTT service in streamer to receive responses from detection:**
+
+    host: mqtt://you_streamer_address_or_ip:1883
+    No requires auth
+
 **For use with GPU (CUDA drivers)** IN WIP - Not Functional
 -
 **Install CUDA drivers on virtualization service that you have:**
